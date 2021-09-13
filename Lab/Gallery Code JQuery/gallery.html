@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        #img_one{
+            margin-left: 20px;
+        }
+        #img_two{
+            margin-left: 20px;
+        }
+        #img_three{
+            margin-left: 20px;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            $("#full_image_one").hide();
+            $("#full_image_two").hide();
+            $("#full_image_three").hide();
+            $("#img_one").mouseenter(function()
+            {
+                $("#full_image_one").show(800);
+            })
+            $("#img_one").mouseleave(function()
+            {
+                $("#full_image_one").hide(800);
+            })
+
+            $("#img_two").mouseenter(function()
+            {
+                $("#full_image_two").show(800);
+            })
+            $("#img_two").mouseleave(function()
+            {
+                $("#full_image_two").hide(800);
+            })
+
+            $("#img_three").mouseenter(function()
+            {
+                $("#full_image_three").show(800);
+            })
+            $("#img_three").mouseleave(function()
+            {
+                $("#full_image_three").hide(800);
+            })
+        })
+    </script>
+</head>
+<body>
+    <a id="img_one" href="">Toy Story</a>
+    <a id="img_two" href="">Secret Of Pet 2</a>
+    <a id="img_three" href="">Show On Wheels Logo</a>
+    <div id="full_image_one" style="width: 700px; height: 500px; padding: 5px; border: 2px solid rebeccapurple;">
+        <img src="toystory.jpeg" style="width: 700px; height: 500px;" />
+    </div>
+    <div id="full_image_two" style="width: 700px; height: 500px; padding: 5px; border: 2px solid rebeccapurple;">
+        <img src="secretOfpet2.jpeg" style="width: 700px; height: 500px;" />
+    </div>
+    <div id="full_image_three" style="width: 700px; height: 500px; padding: 5px; border: 2px solid rebeccapurple;">
+        <img src="Logo.jpg" style="width: 700px; height: 500px;" />
+    </div>
+
+    <div id="fix">
+        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ipsa totam
+             distinctio adipisci eius sapiente vel, odio reiciendis expedita tempore 
+             voluptate consequuntur, provident quis quae dicta sunt, ut pariatur quod.
+        Repellendus veritatis corrupti a nihil quibusdam explicabo aspernatur sunt cum 
+        quia voluptatem nulla ea deserunt, suscipit officia? Accusamus fugit, sint dolor 
+        ad debitis aspernatur et perferendis. Harum obcaecati id est!
+        Possimus quidem eius dolores sapiente molestias a nostrum dolor enim autem 
+        voluptatibus doloremque magnam obcaecati natus, deleniti ducimus doloribus. 
+        Nemo culpa sequi ut laudantium id placeat neque sunt incidunt magnam!
+        Aperiam maiores, sit eius nobis aspernatur sunt est culpa accusantium? Quis 
+        hic quas repudiandae ex velit accusamus esse distinctio nemo, quasi 
+        exercitationem mollitia enim dolores quia unde excepturi expedita soluta?
+        lorem*50
+    </p>
+    
+    </div>
+</body>
+</html>

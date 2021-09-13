@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Chart</title>
+    <script type="text/javascript" src="RGraph.common.core.js"></script>
+    <script type="text/javascript" src="RGraph.bar.js"></script>
+</head>
+
+<body>
+    <canvas width="900" height="450" id="cvs" style="border:3px solid black"></canvas>
+    <script type="text/javascript" charset="utf-8">
+
+        window.onload = (function () {
+            var data = [40, 60, 75, 79, 80, 90];
+
+            new RGraph.Bar({
+                id: 'cvs',
+                data: data,
+                options: {
+                    title: 'Growth of Placements Of Our University Students',
+                    xaxisLabels: [
+                        2014, 2015, 2016, 2017, 2018, 2019
+                    ],
+                    marginLeft: 55,
+                    marginInner: 20,
+                    marginRight: 40,
+                    titleBold: true,
+                    colors: ['red'],
+                    titleSize: 10,
+                }
+            }).draw();
+        });
+    </script>
+</body>
+
+</html>

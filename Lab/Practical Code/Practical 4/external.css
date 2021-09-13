@@ -1,0 +1,20 @@
+#Links {
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+#Links a {
+  padding: 12px;
+}
+#Links :hover {
+  background-color: lightseagreen;
+  color: red;
+}
+
+#onhead {
+  text-align: center;
+  font-size: 30px;
+  color: Red;
+  background-color: rgb(152, 146, 197);
+}

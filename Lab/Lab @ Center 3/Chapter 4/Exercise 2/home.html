@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="myForm" action="#">
+        <label for="fname">Number of Players:</label>
+        <input type="number" id="fname" name="uNumber"><br><br>
+        <input type="submit" value="Submit" onclick="checkInp()">
+    </form>
+    <p id="demo"></p>
+</body>
+<script>
+    var globals;
+    function checkInp() {
+        var x = document.forms["myForm"]["uNumber"].value;
+        if (isNaN(x)) {
+            alert("Must input numbers");
+            return false;
+        }
+        else {
+            if (x <= 0) {
+                alert("Number should be more than 0 and also not negatives")
+            }
+            else {
+                globals = x;
+                var i = 0;
+                while (i < x) {
+                    myFunction();
+                    i = i + 1;
+                }
+            }
+        }
+    }
+    function myFunction() {
+        var txt;
+        var person = prompt("Please enter players name:", "Harry Potter");
+        if (person == null || person == "") {
+            txt = "You didn't entered all the players";
+        } else {
+            txt = "Congratulation You Have Entered all the players name";
+        }
+        document.getElementById("demo").innerHTML = txt;
+    }
+</script>
+
+</html>

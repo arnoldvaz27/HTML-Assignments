@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Chart</title>
+    <script type="text/javascript" src="RGraph.common.core.js"></script>
+    <script type="text/javascript" src="RGraph.bar.js"></script>
+</head>
+<body>
+    <canvas width="900" height="450" id="cvs" style="border:3px solid black"></canvas>
+    <script type="text/javascript" charset="utf-8">
+
+    // You don't HAVE to use the window.onload event here, but if you don't
+    // you must include the libraries and have defined the canvas tag first.
+    window.onload = (function ()
+    {
+        var data = [ 3 , 5 , 3 ,4,4,5,4];
+
+        new RGraph.Bar({
+            id: 'cvs',
+            data: data,
+            options: {
+                title : 'Movie Ratings',
+                xaxisLabels: [
+                    'Toy Story' ,' Black Panther', 'Iron Man', 'Spider Man', 'Bat Man', 'Thor', 
+                    'Hulk'
+                ],
+                marginLeft: 55,
+                marginInner : 20,
+                marginRight : 40,
+                titleBold : true,
+                colors: ['red'],
+                titleSize: 10,
+            }
+        }).draw();
+    });
+    </script>
+</body>
+</html>

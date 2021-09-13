@@ -1,0 +1,17 @@
+
+#Links
+{
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+#Links a{
+    padding: 12px;
+}
+#Links :hover
+{
+    background-color: lightseagreen;
+    color: red;
+}
+ 

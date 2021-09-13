@@ -1,0 +1,108 @@
+<HTML>
+
+<HEAD>
+    <TITLE>SkyLight University</TITLE>
+    <script>
+        function checkName() {
+            if (!form1.username.value.match(/^[a-zA-Z]+$/) &&
+                form1.username.value != "") {
+                form1.username.value = "";
+                form1.username.focus();
+                alert("Please enter only alphabets in text");
+            }
+        }
+        function checkPassword() {
+            if (form1.pass1.value != form1.pass2.value) {
+                alert("Passwords entered do not match");
+            }
+            else
+                if (typeof (Storage) !== "undefined") {
+                    localStorage.userid = form1.username.value;
+                    localStorage.passwrd = form1.pass1.value;
+                    alert("Registered");
+                }
+        }
+        function login() {
+            if (typeof (Storage) !== "undefined") {
+                if (form2.username1.value == localStorage.userid) {
+                    form2.pass3.value = localStorage.passwrd;
+                }
+            }
+        }
+        function onSubmit() {
+            if ((form2.username1.value != "") && (form2.pass3.value == localStorage.passwrd))
+                alert("Signed In");
+            else
+                alert("Password do not match");
+        }
+    </script>
+    <LINK type="text/css" rel="stylesheet" href="ExternalStylesheet/homestylesheet.css" />
+</HEAD>
+
+<BODY>
+    <DIV id="mainDivContainer" style="position: relative; width: 100%; margin-top: 0px; margin-bottom: 0px;">
+
+        <DIV style="width: 100%;  margin-top: 0px;">
+
+            <DIV style="width: 100%; height:190px;">
+
+                <IMG src="images\logo.gif" width=240 height=150></IMG>
+
+                <nav id="toplink" style="padding-top: 60px;">
+                    <A href="home.html">Home</A>|
+                    <A href="aboutus.html">About Us</A>|
+                    <A href="Courses.html">Courses</A>|
+                    <A href="register.html">Register</A>
+                </nav>
+            </DIV>
+            <DIV style="width: 98%; min-height:60%;border:1px solid red;margin-left: 5px;">
+                <div style="width: 95%;margin-left: 10%;">
+                    <FORM id="form1" name="Sign Up" onsubmit="checkPassword()"
+                        style="width: 40%;float: left;margin-left: 30px;">
+                        <TABLE>
+                            <TR>
+                                <TH colspan="2"><B><I>Create an Account</I></B></TH>
+                            </TR>
+                            <TR>
+                                <TD>Name:</TD>
+                                <TD> <Input type="text" name="username" onkeyup="checkName();" required></TD>
+                            </TR>
+                            <TR>
+                                <TD>Password:</TD>
+                                <TD> <Input type="password" name="pass1" required></TD>
+                            </TR>
+                            <TR>
+                                <TD>Confirm Password:</TD>
+                                <TD> <Input type="password" name="pass2" required></TD>
+                            </TR>
+                            <TR>
+                                <TD><BR><Button type="Submit">Register</TD>
+                            </TR>
+                        </TABLE>
+                    </FORM>
+                    <FORM id="form2" name="Sign In" onsubmit="onSubmit();"
+                        style="width: 40%;float: right;margin-right: 100px;">
+                        <TABLE>
+                            <TR>
+                                <TH colspan="2"><B><I>Sign In</I></B></TH>
+                            </TR>
+                            <TR>
+                                <TD>Name:</TD>
+                                <TD> <Input type="text" name="username1" onkeyup="checkName();" onchange="login();"
+                                        required></TD>
+                            </TR>
+                            <TR>
+                                <TD>Password:</TD>
+                                <TD> <Input type="password" name="pass3" required></TD>
+                            </TR>
+                            <TR>
+                                <TD><BR><Button type="Submit">Sign In</TD>
+                            </TR>
+                        </TABLE>
+                    </FORM>
+
+                </DIV>
+            </DIV>
+</BODY>
+
+</HTML>

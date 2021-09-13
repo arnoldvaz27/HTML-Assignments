@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#one_image_descp").hide();
+            $("#two_image_descp").hide();
+            $("#three_image_descp").hide();
+            $("#four_image_descp").hide();
+            $("#one_image").mouseenter(function () {
+                $("#one_image_descp").show(800);
+            })
+            $("#one_image").mouseleave(function () {
+                $("#one_image_descp").hide(800);
+            })
+
+            $("#two_image").mouseenter(function () {
+                $("#two_image_descp").show(200);
+            })
+            $("#two_image").mouseleave(function () {
+                $("#two_image_descp").hide(800);
+            })
+
+            $("#three_image").mouseenter(function () {
+                $("#three_image_descp").show(800);
+            })
+            $("#three_image").mouseleave(function () {
+                $("#three_image_descp").hide(800);
+            })
+
+            $("#four_image").mouseenter(function () {
+                $("#four_image_descp").show(800);
+            })
+            $("#four_image").mouseleave(function () {
+                $("#four_image_descp").hide(800);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <h2>Trave Around USA. Inc</h2>
+    </div>
+    <hr>
+    <div>
+        <p>
+            Welcome to our Website<br>
+            There are many beautiful tourist location to visit in USA.<br>
+            On this Website you can get information regarding the tourist places in USA.
+        </p>
+    </div>
+    <div>
+        <h1 style="font-family: 'Courier New', Courier, monospace;">
+            USA
+        </h1>
+    </div>
+    <div style="background-color: aqua;text-align: center;font-weight: bold;color: red;padding: 1px;">
+        <p>Move your mouse over the images to view the information for tourist.</p>
+    </div>
+    <div style="margin-top: 20px;">
+        <img src="nationalgallery.jpg" style="width: 24%; height: 24%;" id="one_image" />
+        <img src="sanjose.jpg" style="width: 24%; height: 24%;" id="two_image" />
+        <img src="statueofliberty.jpg" style="width: 24%; height: 24%;" id="three_image" />
+        <img src="WhitneyMuseumofAmericanArt.jpg" style="width: 24%; height: 24%;" id="four_image" />
+    </div>
+    <div style="margin-top: 20px;">
+        <img src="NationalGOA_ex.png" style="width: 24%; height: 24%;" id="one_image_descp" />
+        <img src="sanjose_ex.png" style="width: 24%; height: 24%;" id="two_image_descp" />
+        <img src="StatueofLiberty_ex.png" style="width: 24%; height: 24%;" id="three_image_descp" />
+        <img src="Whitneymuseum_ex.jpg" style="width: 24%; height: 24%;" id="four_image_descp" />
+    </div>
+</body>
+
+</html>

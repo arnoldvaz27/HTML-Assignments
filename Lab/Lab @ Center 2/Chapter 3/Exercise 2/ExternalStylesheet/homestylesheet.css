@@ -1,0 +1,70 @@
+            article p {
+            color: navy;
+            font-size: 15px;
+            font-family: arial;
+            width: 1100px;
+        }
+       body {
+            background: url(background.gif) repeat-x #aacf43;
+		background-color:lightgrey;
+		margin:0px auto;
+		text-align:left;
+		}
+        details {
+            color: navy;
+            font-family: Script MT Bold;
+            font-size: 15px;
+        }
+        h1 {
+            font-family: Script MT Bold;
+            color: navy;
+            font-size: 20px;
+            }
+            
+        details ul {
+            color: navy;
+            font-size: 15px;
+        }
+        
+
+#toplink{
+color:navy;
+width:400px;
+height:104px;
+float:right;
+text-align:right;
+}
+nav a:link{
+color:white;
+}
+nav a:visited{
+color:white;
+} 
+nav a:hover{ 
+color: red; 
+} 
+nav a{
+display: inline;
+text-decoration: none;
+color:white;
+margin-right:20px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+
+        

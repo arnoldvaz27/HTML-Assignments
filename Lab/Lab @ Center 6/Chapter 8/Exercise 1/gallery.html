@@ -1,0 +1,101 @@
+<HTML>
+
+<HEAD>
+    <TITLE>SkyLight University</TITLE>
+    <LINK type="text/css" rel="stylesheet" href="ExternalStylesheet/homestylesheet.css" />
+</HEAD>
+
+<BODY>
+    <DIV id="mainDivContainer" style="position: relative; width: 100%; margin-top: 0px; margin-bottom: 0px;">
+
+        <DIV style="width: 100%;  margin-top: 0px;">
+
+            <DIV style="width: 100%; height:190px;">
+
+                <IMG src="images\logo.gif" width=240 height=150></IMG>
+
+                <nav id="toplink" style="padding-top: 60px;">
+                    <A href="home.html">Home</A>|
+                    <A href="aboutus.html">About Us</A>|
+                    <A href="careers.html">Careers</A>|
+                    <A href="contactus.html">Contact Us</A>|
+                    <A href="courses.html">Courses</A>|
+                    <A href="admission.html">Admission</A>
+                </nav>
+            </DIV>
+            <DIV style="width: 98%; min-height:100%;border:1px solid red;padding-left: 10px;margin-left: 2px;">
+                <h2 style="text-align:center">College Gallery</h2>
+
+                <p>Gallery 1:</p>
+                <div class="slideshow-container">
+                    <div class="mySlides1">
+                        <img src="images/Campusimage1.png" style="width:30%;height: 30%;">
+                    </div>
+
+                    <div class="mySlides1">
+                        <img src="images/Campusimage2.png" style="width:30%;height: 30%;">
+                    </div>
+
+                    <div class="mySlides1">
+                        <img src="images/Campusimage3.jpg" style="width:30%;height: 30%;">
+                    </div>
+
+
+                    <div class="mySlides1">
+                        <img src="images/Campusimage4.jpg" style="width:30%;height: 30%;">
+                    </div>
+
+                    <div class="mySlides1">
+                        <img src="images/Campusimage5.jpg" style="width:30%;height: 30%;">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                </div>
+
+                <p>Gallery 2:</p>
+                <div class="slideshow-container">
+                    <div class="mySlides2">
+                        <img src="images/Campusimage6.jpg" style="width:30%;height: 30%;">
+                    </div>
+
+                    <div class="mySlides2">
+                        <img src="images/Campusimage7.png" style="width:30%;height: 30%;">
+                    </div>
+
+                    <div class="mySlides2">
+                        <img src="images/Campusimage8.jpg" style="width:30%;height: 30%;">
+                    </div>
+
+                    <div class="mySlides2">
+                        <img src="images/Campusimage9.jpg" style="width:30%;height: 30%;">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                </div>
+            </DIV>
+        </DIV>
+        <script>
+            var slideIndex = [1, 1];
+            var slideId = ["mySlides1", "mySlides2"]
+            showSlides(1, 0);
+            showSlides(1, 1);
+
+            function plusSlides(n, no) {
+                showSlides(slideIndex[no] += n, no);
+            }
+
+            function showSlides(n, no) {
+                var i;
+                var x = document.getElementsByClassName(slideId[no]);
+                if (n > x.length) { slideIndex[no] = 1 }
+                if (n < 1) { slideIndex[no] = x.length }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex[no] - 1].style.display = "block";
+            }
+        </script>
+</BODY>
+
+</HTML>
