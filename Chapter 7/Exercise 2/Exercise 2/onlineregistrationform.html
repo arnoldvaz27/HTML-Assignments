@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head><link type="text/css" rel="stylesheet" href="ExternalStylesheet/homestylesheet.css" />
+
+<script>
+function checkNum() 
+{
+	if (!form1.number.value.match(/^[0-9]+$/) && form1.number.value !="")
+               {
+                    form1.number.value="";
+                    form1.number.focus(); 
+                    alert("Please Enter only numbers in text");
+               }
+}
+function checkRoll() 
+{
+	if (!form1.roll.value.match(/^[0-9]+$/) && form1.roll.value !="")
+               {
+                    form1.roll.value="";
+                    form1.roll.focus(); 
+                    alert("Please Enter only numbers in text");
+               }	
+}
+
+function checkFirstName() 
+{
+  if (!form1.usrname.value.match(/^[a-zA-Z]+$/) && form1.usrname.value !="")
+               {
+                    form1.usrname.value="";
+                    form1.usrname.focus(); 
+                    alert("Please Enter only alphabets in text");
+               }	
+}
+function checkLastName() 
+{
+	if (!form1.usrname1.value.match(/^[a-zA-Z]+$/) && form1.usrname1.value !="")
+               {
+                    form1.usrname1.value="";
+                    form1.usrname1.focus(); 
+                    alert("Please Enter only alphabets in text");
+               }
+}
+
+function check()
+{
+if((document.form1.usrname.value!="")&&(document.form1.usrname1.value!="")&&(document.form1.mail.value!="")&&(document.form1.roll.value!="")&&(document.form1.number.value!="")&&(document.form1.sel.value=="andro"))
+{
+alert("Your details have been saved.\nPlease submit the course fee at the cash counter before 13-04-2013 and collect your ID card.\nThe training will start on 23-04-2013 from 10:30 AM to 4:30PM.");
+}
+else if((document.form1.usrname.value!="")&&(document.form1.usrname1.value!="")&&(document.form1.mail.value!="")&&(document.form1.roll.value!="")&&(document.form1.number.value!="")&&(document.form1.sel.value=="java"))
+{
+alert("Your details have been saved.\nPlease submit the course fee at the cash counter before 20-03-2013 and collect your ID card.\nThe Java training will start on 30-03-2013 from 10:30 AM to 4:30PM.");
+}
+else if((document.form1.usrname.value!="")&&(document.form1.usrname1.value!="")&&(document.form1.mail.value!="")&&(document.form1.roll.value!="")&&(document.form1.number.value!="")&&(document.form1.sel.value=="C"))
+{
+alert("Your details have been saved.\nPlease submit the course fee at the cash counter before 20-04-2013 and collect your ID card.\n\n Robotics training will start on 30-04-2013 from 10:00 AM to 4:00PM.");
+}
+else if((document.form1.usrname.value!="")&&(document.form1.usrname1.value!="")&&(document.form1.mail.value!="")&&(document.form1.roll.value!="")&&(document.form1.number.value!="")&&(document.form1.sel.value=="hack"))
+{
+alert("Your details have been saved.\nPlease submit the course fee at the cash counter before 13-05-2013 and collect your ID card.\nThe training will start on 31-05-2013 from 09:00 AM to 5:00PM.");
+}
+}
+</script>
+<style>
+button{
+border:2px solid navy;
+background:white;
+height:40px;
+width:120px;
+border-radius:5px;
+background-color:navy;
+color:white;
+}
+h1{
+text-color:navy;
+padding-left:80px;
+text-align:center;
+}
+td{
+font-size:20px;
+width:400px;
+padding:5px;
+}
+form{
+border:5px solid red;
+}
+h1{
+color:#C71585;
+}
+table{
+margin-right:400px;
+margin-left:400px;
+}
+</style>
+</head>
+<body>
+<form name="form1" onsubmit="check();">
+<h1> Register Online</h1>
+<Table>
+<tr>
+<td>First Name</td>
+<td><input type="text" id="usrname" PlaceHolder="Enter Your First Name" onkeyup="checkFirstName();" required></td>
+</tr>
+<tr> 
+<td> Last Name</td>
+<td><input type="text" id="usrname1" PlaceHolder="Enter Your Last Name"onkeyup="checkLastName();" required></td>
+</tr>
+<tr> 
+<td> Email ID</td>
+<td><input type="text" title="email" id="mail" PlaceHolder="Enter Your email address" pattern="[^@]+@[a-zA-Z]+\.[a-zA-Z]{2,6}" required></td>
+</tr>
+<tr> 
+<td> Roll Number</td>
+<td><input type="text" id="roll" PlaceHolder="Enter Your Roll Number" onkeyup="checkRoll();" required></td>
+</tr>
+<tr>
+ <td>Training Program</td>
+<td><select id="sel">
+<option value="movie">Select Training</option>
+<option value="andro">Android</option>
+    <option value="java">Java</option>
+<option value="C">Robotics</option>
+    <option value="hack">Ethical Hacking</option>
+</select></td>
+</tr>
+<tr>
+<td>Contact Number</td>
+<td><input type="num" id="number"  onkeyup="checkNum();" PlaceHolder="Enter Your Contact Number" required></td>
+</tr>
+<tr><td>
+<Button type="submit">Submit</BUTTON></td>
+<td><BUTTON type="reset">Reset</BUTTON>
+</tr>
+</table>
+</form>
+</body>
+</html>

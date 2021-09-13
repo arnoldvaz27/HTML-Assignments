@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+a{
+color:orange;
+font-size:15px;
+}
+th{
+color: red;
+font-size:15px;}
+tr{
+color:red;
+font-size:15px;
+}
+p{
+font-size:20px;
+color:blue;
+font-weight:bold;
+}
+</style>
+<script type="text/javascript" src="jquery-1.8.3.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#coolMenu").hide(); 
+$("#prooffers").hide(); 
+$("#bank").mouseenter(function(){
+$("#coolMenu").show(500);
+});
+$("#bank").mouseleave(function(){
+$("#coolMenu").hide(500);
+});
+$("#pro").mouseenter(function(){
+$("#prooffers").show(500);
+});
+$("#pro").mouseleave(function(){
+$("#prooffers").hide(500);
+});
+
+});
+</script>
+</head>
+<body><P>Place the mouse over the 'Admission Calender' link to view the admission calender (2013-14)  for Social Psychology, Botany, and Communications.</P>
+<a id="bank" href="">Admission Calender</a>
+
+        <div id="coolMenu" style=" width: 500px; height: 200px; padding-top: 0px; border:4px solid red; background-color:lightgrey;">
+	<table border="1px solid red">
+	<tr>
+		<th>Serial Number</th><th>Course</th><th>Admission Incharge</th><th>Availability of Application Form</th><th>Last Date of Submission of Application Form</th>
+	</tr>
+		<tr><td>1.</td><td>Social Psychology</td><td>Peter</td><td>07-04-2013</td><td>15-05-2013</td></tr>
+		<tr><td>2.</td><td>Botany</td><td>Mark V. Wen</td><td>15-05-2013</td><td>30-05-2013</td></tr>
+	
+		<tr><td>3.</td><td>Communications</td><td>Alice Ben</td><td>30-04-2013</td><td>10-05-2013</td></tr>
+	
+
+       </table>  
+	</div>
+          
+</body>
+</html>

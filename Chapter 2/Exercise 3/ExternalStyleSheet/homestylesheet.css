@@ -1,0 +1,47 @@
+            article p {
+            color: green;
+            font-size: 15px;
+            font-family: arial;
+            width: 880px;
+        }
+	
+       body {
+            background: url(background.gif) repeat-x #aacf43;
+		margin:0px auto;
+		text-align:left;
+		}
+        details {
+            color: green;
+            font-family: Script MT Bold;
+            font-size: 20px;
+        }
+        h1 {
+            font-family: Script MT Bold;
+            color: green;
+            font-size: 30px;
+            }
+            
+        details ul {
+            color: green;
+            font-size: 15px;
+        }
+          .auto-style1 {
+            color: green;
+           font-style: italic;
+       }
+
+       #toplink {
+           color: red;
+           transition: transform .2s;
+           margin-left: 40px;
+           word-spacing: 4px;
+       }
+
+       
+       #toplink:hover{
+        color: red;
+        transform: scale(1.1);
+    }
+    .auto-style:hover{
+        font-weight: bold;
+    }

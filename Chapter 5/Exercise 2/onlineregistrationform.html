@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="ExternalStylesheet/homestylesheet.css" />
+
+<style>
+
+button{
+border:2px solid navy;
+background:white;
+height:40px;
+width:120px;
+border-radius:5px;
+background-color:navy;
+color:white;
+}
+h1{
+text-color:navy;
+padding-left:80px;
+text-align:center;
+}
+td{
+font-size:20px;
+width:400px;
+padding:5px;
+}
+form{
+border:5px solid red;
+}
+h1{
+color:#C71585;
+}
+table{
+margin-right:400px;
+margin-left:400px;
+}
+</style>
+</head>
+<body>
+<form name="form1">
+<h1> Register Online</h1>
+<Table>
+<tr>
+<td>First Name</td>
+<td><input type="text" name="usrname" PlaceHolder="Enter Your First Name" required></td>
+</tr>
+<tr> 
+<td> Last Name</td>
+<td><input type="text" id="usrname1" PlaceHolder="Enter Your Last Name" required></td>
+</tr>
+<tr> 
+<td> Email ID</td>
+<td><input type="email" id="mail" PlaceHolder="Enter Your email address" pattern="[^@]+@[a-zA-Z]+\.[a-zA-Z]{2,6}" required></td>
+</tr>
+<tr> 
+<td> Roll Number</td>
+<td><input type="text" id="roll" PlaceHolder="Enter Your Roll Number" required></td>
+</tr>
+<tr>
+ <td>Training Program</td>
+<td><select id="sel">
+<option value="movie">Select Training</option>
+<option value="andro">Android</option>
+    <option value="java">Java</option>
+<option value="C">Robotics</option>
+    <option value="hack">Ethical Hacking</option>
+</select></td>
+</tr>
+<tr>
+<td>Contact Number</td>
+<td><input type="num" id="number" PlaceHolder="Enter Your Contact Number" required></td>
+</tr>
+<tr><td>
+<Button type="submit">Submit</BUTTON></td>
+<td><BUTTON type="reset">Reset</BUTTON>
+</td></tr>
+</table>
+</form>
+
+</body>
+</html>

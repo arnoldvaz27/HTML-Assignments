@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<HTML><TITLE>OnlineBookings Page</TITLE>
+<HEAD>
+<link type="text/css" rel="stylesheet" href="ExternalStylesheet/homestylesheet.css" />
+
+<style>
+P{
+font-size:20px;
+color:blue;
+}
+ul{
+list-style-type:square;
+color:red;
+font-size:20px;
+}
+canvas{
+position:relative;
+top:0px;
+}
+</style>
+<script type="text/javascript" src="./RGraph.common.core.js" ></script>
+    <script type="text/javascript" src="./RGraph.bar.js" ></script>
+</head>
+<BODY>
+<h1>Placements:</h1>
+<P>We conduct the placement programs within our institutes to provide jobs to students who are in the stage of completing the programme in the current academic year. In this programme, a lot of companies visit our university to select students.</P>
+<P>Companies visited last year:</P>
+<ul>
+<li>360 Networks Inc.</LI>
+<li>724 Solutions Inc.</LI>
+<li>Advantech Inc.</LI>
+<li>Amcor Ltd.</LI>
+<br>
+<P>The following bar-graph depicts the number of students placed in the companies over the last six years.</P>
+<br><br><br>
+<canvas width="700" height="250" id="test" style="border:1px solid black"></canvas>
+<script type="text/javascript" charset="utf-8">
+var bar = new RGraph.Bar('test', [60,80,90,50,70,90]);
+bar.Set('chart.gutter', 50);
+bar.Set('chart.colors', ['blue']);
+bar.Set('chart.labels', ["2007" , "2008" , "2009" , "2010","2011","2012" ]);
+bar.Draw();
+</script>
+
+</BODY>
+</HTML>
